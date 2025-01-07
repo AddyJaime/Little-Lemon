@@ -11,11 +11,13 @@ const LittleLemonFooter: React.FC = () => {
 
 const styles = StyleSheet.create({
   container: {
+    flex: 0,
     backgroundColor: "#F4CE14",
-    padding: 10,
+    justifyContent: "center",
   },
   p: {
     textAlign: "center",
+    fontSize: 20,
   },
 });
 

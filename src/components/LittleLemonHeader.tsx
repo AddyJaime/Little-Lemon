@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, StyleProp, StyleSheet } from "react-native";
+import { View, Text, StyleSheet } from "react-native";
 
 const LittleLemonHeader: React.FC = () => {
   return (
@@ -11,15 +11,15 @@ const LittleLemonHeader: React.FC = () => {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 0.2,
+    flex: 0.1,
     backgroundColor: "#F4CE14",
   },
-
   title: {
     fontWeight: "bold",
-    padding: 60,
+    padding: 30,
     textAlign: "center",
     fontSize: 25,
+    marginVertical: 50,
   },
 });
 
