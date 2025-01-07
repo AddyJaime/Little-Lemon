@@ -4,10 +4,7 @@ import { View, Text, StyleSheet } from "react-native";
 const WelcomeScreen: React.FC = () => {
   return (
     <View style={styles.container}>
-      <Text style={styles.h1}>
-        Welcome to Little
-        <Text style={styles.h2}>Lemon</Text>
-      </Text>
+      <Text style={styles.h1}>Welcome to Little Lemon</Text>
     </View>
   );
 };
@@ -20,9 +17,6 @@ const styles = StyleSheet.create({
     color: "white",
     textAlign: "center",
     fontSize: 30,
-  },
-  h2: {
-    color: "green",
   },
 });
 
