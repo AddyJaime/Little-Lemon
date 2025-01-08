@@ -4,7 +4,7 @@ import { View, Text, StyleSheet, ScrollView } from "react-native";
 const WelcomeScreen: React.FC = () => {
   return (
     <View style={styles.container}>
-      <ScrollView horizontal={false} style={styles.scrollView}>
+      <ScrollView indicatorStyle={"white"} style={styles.scrollView}>
         <Text style={styles.h1}>Welcome to Little Lemon</Text>
         <Text style={styles.p}>
           Little Lemon is a charming neighborhood bistro that serves simple food
