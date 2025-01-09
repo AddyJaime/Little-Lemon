@@ -21,6 +21,6 @@ const styles = StyleSheet.create({
     backgroundColor: "#495E57",
   },
   content: {
-    flex: 1, // Ensure WelcomeScreen takes available space
+    flex: 1,
   },
 });

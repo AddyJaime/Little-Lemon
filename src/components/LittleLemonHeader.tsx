@@ -12,7 +12,7 @@ const LittleLemonHeader: React.FC = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 0.1,
-    backgroundColor: "#F4CE14",
+    backgroundColor: "#EE9972",
   },
   title: {
     fontWeight: "bold",

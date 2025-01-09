@@ -30,7 +30,7 @@ const styles = StyleSheet.create({
     fontSize: 65,
   },
   p: {
-    color: "white",
+    color: "#EDEFEE",
     textAlign: "center",
     paddingTop: 20,
     marginVertical: 20,
@@ -39,7 +39,7 @@ const styles = StyleSheet.create({
   scrollView: {
     flexGrow: 1,
     padding: 50,
-    backgroundColor: "black",
+    backgroundColor: "#333333",
   },
 });
 
