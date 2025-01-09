@@ -25,11 +25,12 @@ const menuItemsToDisplay = [
 ];
 
 import React from "react";
-interface MenuItems {
+
+interface ItemProps {
   name: string;
 }
 
-const Item = ({ name }) => {
+const Item: React.FC<ItemProps> = ({ name }) => {
   return (
     <View>
       <Text>{name}</Text>
@@ -38,7 +39,10 @@ const Item = ({ name }) => {
 };
 
 const MenuItems: React.FC = () => {
-  const renderItem = ({ item }) => <Item name={item.name} />;
+  const renderItem = ({ item }: { item: { name: string; id: string } }) => (
+    <Item name={item.name} />
+  );
+
   return (
     <View>
       <FlatList data={menuItemsToDisplay} renderItem={renderItem} />
