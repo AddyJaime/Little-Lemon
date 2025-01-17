@@ -37,8 +37,7 @@ const MenuItems: React.FC = () => {
     <Item name={item.name} price={item.price} />
   );
   return (
-    <View>
-      {/* <Text>View Menu</Text> */}
+    <View style={styles.content}>
       <FlatList
         data={menuItemsToDisplay}
         keyExtractor={(item) => item.id}
@@ -58,6 +57,9 @@ const Item: React.FC<{ name: string; price: string }> = ({ name, price }) => {
 };
 
 const styles = StyleSheet.create({
+  content: {
+    flex: 1,
+  },
   container: {
     flexDirection: "row",
     justifyContent: "space-between",
