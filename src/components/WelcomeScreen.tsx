@@ -4,8 +4,8 @@ import { View, Text, StyleSheet } from "react-native";
 const WelcomeScreen: React.FC = () => {
   return (
     <View style={styles.container}>
-      <Text style={styles.h1}>Welcome to Little Lemon</Text>
-      <Text style={styles.p}>
+      <Text style={styles.headerText}>Welcome to Little Lemon</Text>
+      <Text style={styles.regularText}>
         Little Lemon is a charming neighborhood bistro that serves simple food
         and classic cocktails in a lively but casual environment. We would love
         to hear more about your experience with us!
@@ -18,17 +18,19 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
   },
-  h1: {
+  headerText: {
     color: "white",
     textAlign: "center",
     fontSize: 30,
+    padding: 40,
+    paddingBottom: 20,
   },
-  p: {
+  regularText: {
     color: "#EDEFEE",
     textAlign: "center",
-    paddingTop: 20,
-    marginVertical: 20,
+    marginVertical: 8,
     fontSize: 25,
+    padding: 20,
   },
 });
 
