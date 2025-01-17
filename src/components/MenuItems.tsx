@@ -42,6 +42,7 @@ const MenuItems: React.FC = () => {
         data={menuItemsToDisplay}
         keyExtractor={(item) => item.id}
         renderItem={renderItem}
+        ItemSeparatorComponent={Separator}
       ></FlatList>
     </View>
   );
@@ -55,6 +56,8 @@ const Item: React.FC<{ name: string; price: string }> = ({ name, price }) => {
     </View>
   );
 };
+
+const Separator = () => <View style={styles.separator} />;
 
 const styles = StyleSheet.create({
   content: {
@@ -73,6 +76,10 @@ const styles = StyleSheet.create({
   itemPrice: {
     fontSize: 25,
     color: "#F4CE14",
+  },
+  separator: {
+    borderBottomWidth: 1,
+    borderColor: "white",
   },
 });
 
