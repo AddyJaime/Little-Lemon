@@ -43,6 +43,7 @@ const MenuItems: React.FC = () => {
         keyExtractor={(item) => item.id}
         renderItem={renderItem}
         ItemSeparatorComponent={Separator}
+        ListHeaderComponent={Header}
       ></FlatList>
     </View>
   );
@@ -59,15 +60,17 @@ const Item: React.FC<{ name: string; price: string }> = ({ name, price }) => {
 
 const Separator = () => <View style={styles.separator} />;
 
+const Header = () => <Text style={styles.headerText}> View Menu</Text>;
+
 const styles = StyleSheet.create({
   content: {
     flex: 1,
+    backgroundColor: "#333333",
   },
   container: {
     flexDirection: "row",
     justifyContent: "space-between",
     padding: 30,
-    backgroundColor: "#333333",
   },
   itemName: {
     fontSize: 25,
@@ -80,6 +83,12 @@ const styles = StyleSheet.create({
   separator: {
     borderBottomWidth: 1,
     borderColor: "white",
+  },
+  headerText: {
+    color: "white",
+    textAlign: "center",
+    fontSize: 30,
+    paddingTop: 25,
   },
 });
 
