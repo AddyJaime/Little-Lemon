@@ -1,11 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import { View, Text, StyleSheet, TextInput, ScrollView } from "react-native";
 
 const LoginScreen: React.FC = () => {
+  const [firstName, onChangeFirstName] = useState("");
+  const [password, onChangePassoword] = useState("");
   return (
     <ScrollView>
       <Text style={styles.header}>Login to continue</Text>
-      <TextInput />
+      <TextInput value={firstName} placeholder="Enter your first name" />
+
+      <TextInput value={password} placeholder="Enter your password " />
     </ScrollView>
   );
 };
