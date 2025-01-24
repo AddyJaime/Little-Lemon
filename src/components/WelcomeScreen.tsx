@@ -19,7 +19,7 @@ const styles = StyleSheet.create({
     color: "white",
     textAlign: "center",
     fontSize: 30,
-    // padding: 40,
+    padding: 40,
     paddingBottom: 5,
   },
   regularText: {
