@@ -27,6 +27,8 @@ const LoginScreen: React.FC = () => {
           value={firstName}
           placeholder="Enter your first name"
           onChangeText={onChangeFirstName}
+          clearButtonMode="always"
+          editable={true}
         />
 
         <TextInput
@@ -36,6 +38,7 @@ const LoginScreen: React.FC = () => {
           onChangeText={onChangePassoword}
           keyboardType={"phone-pad"}
           secureTextEntry={true}
+          clearButtonMode="always"
         />
       </ScrollView>
     </KeyboardAvoidingView>
