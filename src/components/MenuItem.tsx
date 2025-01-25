@@ -81,16 +81,18 @@ const MenuItems: React.FC = () => {
     <View style={menuStyles.container}>
       {!showMenu && (
         <>
-          <Image
-            style={menuStyles.image}
-            source={require("../../assets/log.png")}
-          />
-          <Text>Little Lemon</Text>
-          <Text style={menuStyles.infoSection}>
-            Little Lemon is a charming neighborhood bistro that serves simple
-            food and classic cocktails in a lively but casual environment. View
-            our menu to explore our cuisine with daily specials!
-          </Text>
+          <View style={menuStyles.innerContainerTwo}>
+            <Image
+              style={menuStyles.image}
+              source={require("../../assets/log.png")}
+            />
+            <Text style={menuStyles.littleLemonHeader}>Little Lemon</Text>
+            <Text style={menuStyles.infoSection}>
+              Little Lemon is a charming neighborhood bistro that serves simple
+              food and classic cocktails in a lively but casual environment.
+              View our menu to explore our cuisine with daily specials!
+            </Text>
+          </View>
         </>
       )}
       <Pressable
@@ -123,6 +125,9 @@ const menuStyles = StyleSheet.create({
     paddingHorizontal: 40,
     paddingVertical: 20,
     backgroundColor: "#333333",
+  },
+  innerContainerTwo: {
+    flexDirection: "row",
   },
   sectionHeader: {
     backgroundColor: "#fbdabb",
