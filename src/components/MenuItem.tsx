@@ -122,12 +122,17 @@ const menuStyles = StyleSheet.create({
     flex: 0.95,
   },
   innerContainer: {
-    paddingHorizontal: 40,
+    margin: 40,
     paddingVertical: 20,
     backgroundColor: "#333333",
   },
   innerContainerTwo: {
+    backgroundColor: "red",
     flexDirection: "row",
+    marginHorizontal: 20,
+    width: "100%",
+    justifyContent: "center",
+    alignContent: "center",
   },
   sectionHeader: {
     backgroundColor: "#fbdabb",
@@ -167,10 +172,14 @@ const menuStyles = StyleSheet.create({
   },
   infoSection: {
     fontSize: 24,
-    padding: 20,
-    marginVertical: 8,
+    paddingLeft: 50,
+    marginVertical: 20,
+    marginHorizontal: 40,
     color: "#EDEFEE",
-    textAlign: "center",
+    textAlign: "left",
+    width: "80%",
+    alignSelf: "flex-end",
+    padding: 20,
 
     backgroundColor: "#495E57",
   },
