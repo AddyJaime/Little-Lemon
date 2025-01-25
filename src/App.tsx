@@ -1,18 +1,19 @@
+import React from "react";
 import { View, StyleSheet } from "react-native";
 import LittleLemonHeader from "./components/LittleLemonHeader";
-import WelcomeScreen from "./components/WelcomeScreen";
+// import WelcomeScreen from "./components/WelcomeScreen";
 import LittleLemonFooter from "./components/LittleLemonFooter";
-
-import React from "react";
-import LoginScreen from "./LoginScreen";
+import LoginScreen from "./components/LoginScreen";
+import MenuItem from "./components/MenuItem";
+import MenuItems from "./components/MenuItem";
 
 export default function App() {
   return (
     <>
       <View style={styles.container}>
         <LittleLemonHeader />
-        <WelcomeScreen />
-        <LoginScreen />
+        {/* <WelcomeScreen /> */}
+        <MenuItems />
       </View>
 
       <View>
