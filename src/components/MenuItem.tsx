@@ -87,12 +87,12 @@ const MenuItems: React.FC = () => {
               source={require("../../assets/log.png")}
             />
             <Text style={menuStyles.littleLemonHeader}>Little Lemon</Text>
-            <Text style={menuStyles.infoSection}>
-              Little Lemon is a charming neighborhood bistro that serves simple
-              food and classic cocktails in a lively but casual environment.
-              View our menu to explore our cuisine with daily specials!
-            </Text>
           </View>
+          <Text style={menuStyles.infoSection}>
+            Little Lemon is a charming neighborhood bistro that serves simple
+            food and classic cocktails in a lively but casual environment. View
+            our menu to explore our cuisine with daily specials!
+          </Text>
         </>
       )}
       <Pressable
@@ -127,9 +127,8 @@ const menuStyles = StyleSheet.create({
     backgroundColor: "#333333",
   },
   innerContainerTwo: {
-    backgroundColor: "red",
     flexDirection: "row",
-    marginHorizontal: 20,
+    marginHorizontal: -20,
     width: "100%",
     justifyContent: "center",
     alignContent: "center",
@@ -171,21 +170,25 @@ const menuStyles = StyleSheet.create({
     fontSize: 32,
   },
   infoSection: {
-    fontSize: 24,
-    paddingLeft: 50,
-    marginVertical: 20,
-    marginHorizontal: 40,
+    fontSize: 20,
     color: "#EDEFEE",
-    textAlign: "left",
-    width: "80%",
+    textAlign: "center",
+    width: "100%",
     alignSelf: "flex-end",
-    padding: 20,
+    padding: 10,
 
     backgroundColor: "#495E57",
   },
   image: {
-    width: 60,
+    width: 70,
     height: 50,
+    marginVertical: 30,
+  },
+  littleLemonHeader: {
+    marginVertical: 40,
+    padding: 5,
+    fontSize: 20,
+    color: "white",
   },
 });
 
