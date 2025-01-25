@@ -64,9 +64,11 @@ const MenuItems: React.FC = () => {
     <Item name={item.name} />
   );
 
-  const renderSectionHeader = ({ section }: { section: { title: string } }) => (
-    <Text style={menuStyles.sectionHeader}>{section.title} </Text>
-  );
+  // aqui basicamente estamos destructurando section que es un prop y estamos sacando title que es un string
+  const renderSectionHeader = (props: { section: { title: string } }) => {
+    const { section } = props;
+    return <Text style={menuStyles.sectionHeader}>{section.title} </Text>;
+  };
 
   return (
     <View style={menuStyles.container}>
