@@ -1,5 +1,12 @@
 import React, { useState } from "react";
-import { View, Text, StyleSheet, SectionList, Pressable } from "react-native";
+import {
+  View,
+  Text,
+  StyleSheet,
+  SectionList,
+  Pressable,
+  Image,
+} from "react-native";
 
 interface MenuItem {
   name: string;
@@ -64,7 +71,7 @@ const MenuItems: React.FC = () => {
     <Item name={item.name} />
   );
 
-  // aqui basicamente estamos destructurando section que es un prop y estamos sacando title que es un string
+  //  render section header es una function que recibe un parametro y este paramtro se utiliza para renderizaR los titulos de cada objecto como appetizer y todo eso, este paramtro es un prop el cual se destruturaliza y luego se renderiza
   const renderSectionHeader = (props: { section: { title: string } }) => {
     const { section } = props;
     return <Text style={menuStyles.sectionHeader}>{section.title} </Text>;
@@ -73,14 +80,22 @@ const MenuItems: React.FC = () => {
   return (
     <View style={menuStyles.container}>
       {!showMenu && (
-        <Text style={menuStyles.infoSection}>
-          Little Lemon is a charming neighborhood bistro that serves simple food
-          and classic cocktails in a lively but casual environment. View our
-          menu to explore our cuisine with daily specials!
-        </Text>
+        <>
+          <Image
+            style={menuStyles.image}
+            source={require("../../assets/log.png")}
+          />
+          <Text>Little Lemon</Text>
+          <Text style={menuStyles.infoSection}>
+            Little Lemon is a charming neighborhood bistro that serves simple
+            food and classic cocktails in a lively but casual environment. View
+            our menu to explore our cuisine with daily specials!
+          </Text>
+        </>
       )}
       <Pressable
         style={menuStyles.button}
+        // aqui el prevState viene siendo el argument del parametro boolean de alla arriba osea indicando true or false
         onPress={() => setShowMenu((prevState) => !prevState)}
       >
         <Text style={menuStyles.buttonText}>
@@ -152,6 +167,10 @@ const menuStyles = StyleSheet.create({
     color: "#EDEFEE",
     textAlign: "center",
     backgroundColor: "#495E57",
+  },
+  image: {
+    width: 60,
+    height: 50,
   },
 });
 
