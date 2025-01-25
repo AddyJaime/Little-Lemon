@@ -6,6 +6,7 @@ import {
   SectionList,
   Pressable,
   Image,
+  useColorScheme,
 } from "react-native";
 
 interface MenuItem {
@@ -78,7 +79,7 @@ const MenuItems: React.FC = () => {
   };
 
   return (
-    <View style={menuStyles.container}>
+    <View style={[menuStyles.container]}>
       {!showMenu && (
         <>
           <View style={menuStyles.innerContainerTwo}>
