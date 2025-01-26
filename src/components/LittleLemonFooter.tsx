@@ -14,7 +14,7 @@ const styles = StyleSheet.create({
     flex: 0,
     backgroundColor: "#EE9972",
     justifyContent: "center",
-    padding: 6,
+    padding: 3,
   },
   p: {
     textAlign: "center",

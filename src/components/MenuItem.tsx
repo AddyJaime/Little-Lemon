@@ -9,6 +9,8 @@ import {
   useColorScheme,
 } from "react-native";
 
+import { useDeviceOrientation } from "@react-native-community/hooks";
+
 interface MenuItem {
   name: string;
 }
