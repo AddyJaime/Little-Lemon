@@ -86,6 +86,8 @@ const MenuItems: React.FC = () => {
             <Image
               style={menuStyles.image}
               source={require("../../assets/log.png")}
+              accessible={true}
+              accessibilityLabel="Little Lemon Logo"
             />
             <Text style={menuStyles.littleLemonHeader}>Little Lemon</Text>
           </View>
