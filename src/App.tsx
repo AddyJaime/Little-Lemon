@@ -6,10 +6,10 @@ import LittleLemonFooter from "./components/LittleLemonFooter";
 import LoginScreen from "./components/LoginScreen";
 import MenuItem from "./components/MenuItem";
 import MenuItems from "./components/MenuItem";
-
+import { NavigationContainer } from "@react-navigation/native";
 export default function App() {
   return (
-    <>
+    <NavigationContainer>
       <View style={styles.container}>
         <LittleLemonHeader />
         {/* <WelcomeScreen /> */}
@@ -19,7 +19,7 @@ export default function App() {
       <View>
         <LittleLemonFooter />
       </View>
-    </>
+    </NavigationContainer>
   );
 }
 
