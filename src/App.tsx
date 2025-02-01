@@ -16,9 +16,13 @@ export default function App() {
     <View style={styles.container}>
       <LittleLemonHeader />
       <NavigationContainer>
-        <Stack.Navigator initialRouteName="Home">
-          <Stack.Screen name="Home" component={MenuItems} />
+        <Stack.Navigator initialRouteName="Login">
           <Stack.Screen name="Login" component={LoginScreen} />
+          <Stack.Screen
+            name="Home"
+            component={MenuItems}
+            options={{ headerShown: false }}
+          />
         </Stack.Navigator>
       </NavigationContainer>
       <LittleLemonFooter />

@@ -7,11 +7,19 @@ import {
   ScrollView,
   KeyboardAvoidingView,
   Platform,
+  Pressable,
 } from "react-native";
+
+import { useNavigation } from "@react-navigation/native";
 
 const LoginScreen: React.FC = () => {
   const [firstName, onChangeFirstName] = useState("");
   const [password, onChangePassoword] = useState("");
+  const navigation = useNavigation();
+
+  const handleLogin = () => {
+    navigation.navigate("Home");
+  };
   return (
     <KeyboardAvoidingView
       behavior={Platform.OS === "ios" ? "padding" : "height"}
@@ -21,7 +29,6 @@ const LoginScreen: React.FC = () => {
         keyboardDismissMode="on-drag"
         keyboardShouldPersistTaps="handled"
       >
-        <Text style={styles.header}>Login to continue</Text>
         <TextInput
           style={styles.nameInput}
           value={firstName}
@@ -40,6 +47,10 @@ const LoginScreen: React.FC = () => {
           secureTextEntry={true}
           clearButtonMode="always"
         />
+
+        <Pressable onPress={handleLogin}>
+          <Text style={styles.button}>Login</Text>
+        </Pressable>
       </ScrollView>
     </KeyboardAvoidingView>
   );
@@ -69,6 +80,13 @@ const styles = StyleSheet.create({
     padding: 10,
     borderColor: "black",
     backgroundColor: "white",
+  },
+  button: {
+    backgroundColor: "#EE9972",
+    padding: 15,
+    borderRadius: 8,
+    textAlign: "center",
+    width: 100,
   },
 });
 
