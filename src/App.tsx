@@ -1,13 +1,13 @@
 import React from "react";
-import { View, StyleSheet } from "react-native";
-import LittleLemonHeader from "./components/LittleLemonHeader";
-// import WelcomeScreen from "./components/WelcomeScreen";
-import LittleLemonFooter from "./components/LittleLemonFooter";
-import LoginScreen from "./components/LoginScreen";
-import MenuItem from "./components/MenuItem";
-import MenuItems from "./components/MenuItem";
-import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import { View, StyleSheet } from "react-native";
+import { NavigationContainer } from "@react-navigation/native";
+
+// components
+import LittleLemonHeader from "./components/LittleLemonHeader";
+import LoginScreen from "./components/LoginScreen";
+import MenuItems from "./components/MenuItem";
+import LittleLemonFooter from "./components/LittleLemonFooter";
 
 const Stack = createNativeStackNavigator();
 
@@ -16,8 +16,9 @@ export default function App() {
     <View style={styles.container}>
       <LittleLemonHeader />
       <NavigationContainer>
-        <Stack.Navigator>
+        <Stack.Navigator initialRouteName="Home">
           <Stack.Screen name="Home" component={MenuItems} />
+          <Stack.Screen name="Login" component={LoginScreen} />
         </Stack.Navigator>
       </NavigationContainer>
       <LittleLemonFooter />
