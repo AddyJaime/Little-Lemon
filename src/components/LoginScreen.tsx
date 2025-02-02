@@ -21,44 +21,47 @@ const LoginScreen: React.FC = () => {
     navigation.navigate("Home");
   };
   return (
-    <KeyboardAvoidingView
-      behavior={Platform.OS === "ios" ? "padding" : "height"}
-      style={styles.container}
-    >
-      <ScrollView
-        keyboardDismissMode="on-drag"
-        keyboardShouldPersistTaps="handled"
+    <View style={styles.container}>
+      <KeyboardAvoidingView
+        behavior={Platform.OS === "ios" ? "padding" : "height"}
+        style={styles.container}
       >
-        <TextInput
-          style={styles.nameInput}
-          value={firstName}
-          placeholder="Enter your first name"
-          onChangeText={onChangeFirstName}
-          clearButtonMode="always"
-          editable={true}
-        />
+        <ScrollView
+          keyboardDismissMode="on-drag"
+          keyboardShouldPersistTaps="handled"
+        >
+          <TextInput
+            style={styles.nameInput}
+            value={firstName}
+            placeholder="Enter your first name"
+            onChangeText={onChangeFirstName}
+            clearButtonMode="always"
+            editable={true}
+          />
 
-        <TextInput
-          style={styles.passwordInput}
-          value={password}
-          placeholder="Enter your password "
-          onChangeText={onChangePassoword}
-          keyboardType={"phone-pad"}
-          secureTextEntry={true}
-          clearButtonMode="always"
-        />
+          <TextInput
+            style={styles.passwordInput}
+            value={password}
+            placeholder="Enter your password "
+            onChangeText={onChangePassoword}
+            keyboardType={"phone-pad"}
+            secureTextEntry={true}
+            clearButtonMode="always"
+          />
 
-        <Pressable onPress={handleLogin}>
-          <Text style={styles.button}>Login</Text>
-        </Pressable>
-      </ScrollView>
-    </KeyboardAvoidingView>
+          <Pressable onPress={handleLogin}>
+            <Text style={styles.button}>Login</Text>
+          </Pressable>
+        </ScrollView>
+      </KeyboardAvoidingView>
+    </View>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    backgroundColor: "#495E57",
   },
   header: {
     color: "black",
