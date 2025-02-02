@@ -28,7 +28,11 @@ export default function App() {
             component={MenuItems}
             options={{ headerShown: false }}
           />
-          <Stack.Screen name="Home" component={HomeScreen}></Stack.Screen>
+          <Stack.Screen
+            name="Home"
+            component={HomeScreen}
+            options={{ headerShown: false }}
+          ></Stack.Screen>
         </Stack.Navigator>
       </NavigationContainer>
       <LittleLemonFooter />

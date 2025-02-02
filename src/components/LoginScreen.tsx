@@ -56,8 +56,14 @@ const LoginScreen: React.FC = () => {
             clearButtonMode="always"
           />
 
-          <Pressable onPress={handleLogin}>
-            <Text style={styles.button}>Login</Text>
+          <Pressable
+            style={({ pressed }) => [
+              styles.button,
+              pressed && styles.buttonPressed,
+            ]}
+            onPress={handleLogin}
+          >
+            <Text style={styles.textLogin}>Login</Text>
           </Pressable>
         </ScrollView>
       </KeyboardAvoidingView>
@@ -103,9 +109,16 @@ const styles = StyleSheet.create({
     backgroundColor: "#EE9972",
     padding: 10,
     borderRadius: 8,
-    textAlign: "center",
+
     width: 100,
     marginHorizontal: 150,
+  },
+  buttonPressed: {
+    opacity: 0.1,
+    transform: [{ scale: 0.95 }],
+  },
+  textLogin: {
+    textAlign: "center",
   },
 });
 
