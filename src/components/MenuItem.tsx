@@ -77,7 +77,7 @@ const styles = StyleSheet.create({
   },
   image: { width: 50, height: 50 },
   title: { fontSize: 20, color: "white", marginLeft: 10 },
-  description: { fontSize: 16, textAlign: "center", color: "#EDEFEE" },
+  description: { fontSize: 16, textAlign: "center", color: "black" },
   button: {
     backgroundColor: "#EE9972",
     padding: 15,
