@@ -29,7 +29,10 @@ const HomeScreen: React.FC = () => {
       </Pressable>
       <Text style={styles.header}>Welcome to little lemon!</Text>
       <Pressable
-        style={styles.button}
+        style={({ pressed }) => [
+          styles.button,
+          pressed && styles.buttonPressed,
+        ]}
         onPress={() => navigation.navigate("Menu")}
       >
         <Text style={styles.buttonText}>Go to Menu</Text>
@@ -56,7 +59,6 @@ const styles = StyleSheet.create({
     padding: 10,
     borderRadius: 8,
     marginHorizontal: 150,
-    opacity: 0.5,
   },
   buttonNumberOne: {},
   backToLogin: {

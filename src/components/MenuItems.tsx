@@ -25,7 +25,10 @@ const MenuItems: React.FC = () => {
   return (
     <View style={styles.container}>
       <Pressable
-        style={styles.goBackButton}
+        style={({ pressed }) => [
+          styles.goBackButton,
+          pressed && styles.buttonPressed,
+        ]}
         onPress={() => navigation.goBack()}
       >
         <Text style={styles.goBackText}>← Back to home</Text>
@@ -44,7 +47,13 @@ const MenuItems: React.FC = () => {
           <Text style={styles.description}>
             Little Lemon is a charming bistro with daily specials.
           </Text>
-          <Pressable style={styles.button} onPress={() => setShowMenu(true)}>
+          <Pressable
+            style={({ pressed }) => [
+              styles.button,
+              pressed && styles.buttonPressed,
+            ]}
+            onPress={() => setShowMenu(true)}
+          >
             <Text style={styles.buttonText}>View Menu</Text>
           </Pressable>
         </>
@@ -98,6 +107,10 @@ const styles = StyleSheet.create({
   },
   itemContainer: { padding: 10, backgroundColor: "#333", marginVertical: 5 },
   itemText: { fontSize: 18, color: "#F4CE14" },
+  buttonPressed: {
+    opacity: 0.5,
+    transform: [{ scale: 0.95 }],
+  },
 });
 
 export default MenuItems;
