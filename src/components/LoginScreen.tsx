@@ -30,6 +30,7 @@ const LoginScreen: React.FC = () => {
           keyboardDismissMode="on-drag"
           keyboardShouldPersistTaps="handled"
         >
+          <Text style={styles.welcomeText}>Welcome back</Text>
           <TextInput
             style={styles.nameInput}
             value={firstName}
@@ -62,6 +63,14 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "#495E57",
+    paddingVertical: 100,
+  },
+  welcomeText: {
+    color: "black",
+    fontWeight: "bold",
+    fontSize: 25,
+    textAlign: "center",
+    marginVertical: 20,
   },
   header: {
     color: "black",
@@ -86,10 +95,11 @@ const styles = StyleSheet.create({
   },
   button: {
     backgroundColor: "#EE9972",
-    padding: 15,
+    padding: 10,
     borderRadius: 8,
     textAlign: "center",
     width: 100,
+    marginHorizontal: 150,
   },
 });
 
