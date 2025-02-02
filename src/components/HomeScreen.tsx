@@ -13,7 +13,7 @@ const HomeScreen: React.FC = () => {
     useNavigation<NativeStackNavigationProp<RootStackParamList>>();
   return (
     <View style={styles.container}>
-      <Text style={styles.header}>Welcome to little lemon!!</Text>
+      <Text style={styles.header}>Welcome to little lemon!</Text>
       <Pressable
         style={styles.button}
         onPress={() => navigation.navigate("Menu")}
@@ -27,16 +27,15 @@ const HomeScreen: React.FC = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
   },
   header: {
-    fontSize: 16,
+    fontSize: 30,
   },
   buttonText: { fontSize: 18, color: "black" },
   button: {
+    margin: 40,
     backgroundColor: "#EE9972",
-    padding: 15,
+    padding: 10,
     borderRadius: 8,
     alignItems: "center",
   },
