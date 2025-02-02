@@ -28,7 +28,7 @@ const MenuItems: React.FC = () => {
         style={styles.goBackButton}
         onPress={() => navigation.goBack()}
       >
-        <Text style={styles.goBackText}>← Back</Text>
+        <Text style={styles.goBackText}>← Back to home</Text>
       </Pressable>
 
       {!showMenu ? (
@@ -67,24 +67,29 @@ const MenuItems: React.FC = () => {
 };
 
 const styles = StyleSheet.create({
-  container: { flex: 1, padding: 20 },
+  container: { flex: 1, padding: 20, backgroundColor: "#495E57" },
   goBackButton: { marginBottom: 10, alignSelf: "flex-start" },
-  goBackText: { fontSize: 18, color: "#EE9972" },
+  goBackText: { fontSize: 22, color: "#EE9972" },
   headerContainer: {
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "center",
   },
-  image: { width: 50, height: 50 },
-  title: { fontSize: 20, color: "white", marginLeft: 10 },
-  description: { fontSize: 16, textAlign: "center", color: "black" },
+  image: { width: 50, height: 50, paddingRight: 30 },
+  title: { fontSize: 20, color: "white", marginRight: 20 },
+  description: {
+    fontSize: 16,
+    textAlign: "center",
+    color: "black",
+    marginVertical: 30,
+  },
   button: {
     backgroundColor: "#EE9972",
     padding: 15,
     borderRadius: 8,
     alignItems: "center",
   },
-  buttonText: { fontSize: 18, color: "white" },
+  buttonText: { fontSize: 18, color: "black" },
   sectionHeader: {
     fontSize: 22,
     backgroundColor: "#fbdabb",

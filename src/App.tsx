@@ -6,8 +6,9 @@ import { NavigationContainer } from "@react-navigation/native";
 // components
 import LittleLemonHeader from "./components/LittleLemonHeader";
 import LoginScreen from "./components/LoginScreen";
-import MenuItems from "./components/MenuItem";
+import MenuItems from "./components/MenuItems";
 import LittleLemonFooter from "./components/LittleLemonFooter";
+import HomeScreen from "./components/HomeScreen";
 
 const Stack = createNativeStackNavigator();
 
@@ -23,10 +24,11 @@ export default function App() {
             options={{ headerShown: false }}
           />
           <Stack.Screen
-            name="Home"
+            name="Menu"
             component={MenuItems}
             options={{ headerShown: false }}
           />
+          <Stack.Screen name="Home" component={HomeScreen}></Stack.Screen>
         </Stack.Navigator>
       </NavigationContainer>
       <LittleLemonFooter />
@@ -37,6 +39,6 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "white",
+    backgroundColor: "black",
   },
 });

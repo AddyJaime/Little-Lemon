@@ -11,11 +11,17 @@ import {
 } from "react-native";
 
 import { useNavigation } from "@react-navigation/native";
+import { NativeStackNavigationProp } from "@react-navigation/native-stack";
+
+type RootStackParamList = {
+  Home: undefined;
+};
 
 const LoginScreen: React.FC = () => {
   const [firstName, onChangeFirstName] = useState("");
   const [password, onChangePassoword] = useState("");
-  const navigation = useNavigation();
+  const navigation =
+    useNavigation<NativeStackNavigationProp<RootStackParamList>>();
 
   const handleLogin = () => {
     navigation.navigate("Home");

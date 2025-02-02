@@ -14,8 +14,8 @@ const styles = StyleSheet.create({
     flex: 0,
     backgroundColor: "#EE9972",
     justifyContent: "center",
-    padding: 12,
-    margin: 10,
+    padding: 20,
+    // margin: 10,
   },
   p: {
     textAlign: "center",
