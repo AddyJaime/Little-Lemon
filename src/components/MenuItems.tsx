@@ -45,7 +45,14 @@ const MenuItems: React.FC = () => {
             <Text style={styles.title}>Little Lemon</Text>
           </View>
           <Text style={styles.description}>
-            Little Lemon is a charming bistro with daily specials.
+            Little Lemon Restaurant was founded in Chicago in 2020 by two
+            brothers, Mario and Adrian, who share a passion for Mediterranean
+            cuisine. Their dream was to create a cozy neighborhood bistro where
+            guests could enjoy authentic, simple dishes made with fresh,
+            high-quality ingredients. With a menu inspired by Greek, Turkish,
+            and Italian flavors, Little Lemon quickly became a local favorite
+            for its homemade hummus, lentil burgers, and refreshing
+            citrus-infused cocktails.
           </Text>
           <Pressable
             style={({ pressed }) => [
@@ -87,10 +94,11 @@ const styles = StyleSheet.create({
   image: { width: 50, height: 50, paddingRight: 30 },
   title: { fontSize: 20, color: "white", marginRight: 20 },
   description: {
-    fontSize: 16,
+    fontSize: 20,
     textAlign: "center",
     color: "black",
     marginVertical: 30,
+    fontWeight: "bold",
   },
   button: {
     backgroundColor: "#EE9972",
