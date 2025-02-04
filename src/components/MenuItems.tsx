@@ -85,7 +85,7 @@ const MenuItems: React.FC = () => {
 const styles = StyleSheet.create({
   container: { flex: 1, padding: 20, backgroundColor: "#495E57" },
   goBackButton: { marginBottom: 10, alignSelf: "flex-start" },
-  goBackText: { fontSize: 22, color: "blue" },
+  goBackText: { fontSize: 22, color: "white" },
   headerContainer: {
     flexDirection: "row",
     alignItems: "center",

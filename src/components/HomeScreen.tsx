@@ -62,7 +62,7 @@ const styles = StyleSheet.create({
   },
   buttonNumberOne: {},
   backToLogin: {
-    color: "blue",
+    color: "white",
     fontSize: 20,
     margin: 10,
   },
