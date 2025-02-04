@@ -1,5 +1,5 @@
 import React from "react";
-import { createBottomTabNavigator } from "@react-navigation/native-stack";
+import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { View, StyleSheet } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 
@@ -17,23 +17,23 @@ export default function App() {
     <View style={styles.container}>
       <LittleLemonHeader />
       <NavigationContainer>
-        <Stack.Navigator initialRouteName="Login">
-          <Stack.Screen
+        <Tab.Navigator initialRouteName="Login">
+          <Tab.Screen
             name="Login"
             component={LoginScreen}
             options={{ headerShown: false }}
           />
-          <Stack.Screen
+          <Tab.Screen
             name="Menu"
             component={MenuItems}
             options={{ headerShown: false }}
           />
-          <Stack.Screen
+          <Tab.Screen
             name="Home"
             component={HomeScreen}
             options={{ headerShown: false }}
-          ></Stack.Screen>
-        </Stack.Navigator>
+          ></Tab.Screen>
+        </Tab.Navigator>
       </NavigationContainer>
       <LittleLemonFooter />
     </View>
