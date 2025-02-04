@@ -1,5 +1,5 @@
 import React from "react";
-import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import { createBottomTabNavigator } from "@react-navigation/native-stack";
 import { View, StyleSheet } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 
@@ -10,7 +10,7 @@ import MenuItems from "./components/MenuItems";
 import LittleLemonFooter from "./components/LittleLemonFooter";
 import HomeScreen from "./components/HomeScreen";
 
-const Stack = createNativeStackNavigator();
+const Tab = createBottomTabNavigator();
 
 export default function App() {
   return (
