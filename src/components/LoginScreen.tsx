@@ -91,7 +91,9 @@ const styles = StyleSheet.create({
   },
   nameInput: {
     height: 40,
-    margin: 12,
+    width: 250,
+    marginHorizontal: 80,
+    margin: 30,
     borderWidth: 1,
     padding: 10,
     borderColor: "black",
@@ -99,11 +101,12 @@ const styles = StyleSheet.create({
   },
   passwordInput: {
     height: 40,
-    margin: 12,
+    marginHorizontal: 80,
     borderWidth: 1,
     padding: 10,
     borderColor: "black",
     backgroundColor: "white",
+    width: 250,
   },
   button: {
     backgroundColor: "#EE9972",
