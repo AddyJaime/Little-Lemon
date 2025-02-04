@@ -98,6 +98,7 @@ const styles = StyleSheet.create({
     padding: 10,
     borderColor: "black",
     backgroundColor: "white",
+    borderRadius: 10,
   },
   passwordInput: {
     height: 40,
@@ -107,6 +108,7 @@ const styles = StyleSheet.create({
     borderColor: "black",
     backgroundColor: "white",
     width: 250,
+    borderRadius: 10,
   },
   button: {
     backgroundColor: "#EE9972",
@@ -114,7 +116,8 @@ const styles = StyleSheet.create({
     borderRadius: 8,
 
     width: 100,
-    marginHorizontal: 150,
+    marginHorizontal: 155,
+    marginVertical: 10,
   },
   buttonPressed: {
     opacity: 0.1,
