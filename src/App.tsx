@@ -1,5 +1,6 @@
 import React from "react";
-import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import { createDrawerNavigator } from "@react-navigation/drawer";
+
 import { View, StyleSheet } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 
@@ -10,30 +11,33 @@ import MenuItems from "./components/MenuItems";
 import LittleLemonFooter from "./components/LittleLemonFooter";
 import HomeScreen from "./components/HomeScreen";
 
-const Stack = createNativeStackNavigator();
+const Drawer = createDrawerNavigator();
 
 export default function App() {
   return (
     <View style={styles.container}>
       <LittleLemonHeader />
       <NavigationContainer>
-        <Stack.Navigator initialRouteName="Login">
-          <Stack.Screen
+        <Drawer.Navigator
+          screenOptions={{ drawerPosition: "right" }}
+          initialRouteName="Login"
+        >
+          <Drawer.Screen
             name="Login"
             component={LoginScreen}
             options={{ headerShown: false }}
           />
-          <Stack.Screen
+          <Drawer.Screen
             name="Menu"
             component={MenuItems}
             options={{ headerShown: false }}
           />
-          <Stack.Screen
+          <Drawer.Screen
             name="Home"
             component={HomeScreen}
             options={{ headerShown: false }}
-          ></Stack.Screen>
-        </Stack.Navigator>
+          ></Drawer.Screen>
+        </Drawer.Navigator>
       </NavigationContainer>
       <LittleLemonFooter />
     </View>
