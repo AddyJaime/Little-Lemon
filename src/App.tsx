@@ -1,6 +1,5 @@
 import React from "react";
 import { createDrawerNavigator } from "@react-navigation/drawer";
-
 import { View, StyleSheet } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 
@@ -11,6 +10,9 @@ import MenuItems from "./components/MenuItems";
 import LittleLemonFooter from "./components/LittleLemonFooter";
 import HomeScreen from "./components/HomeScreen";
 
+// other comp
+import "react-native-gesture-handler";
+
 const Drawer = createDrawerNavigator();
 
 export default function App() {
@@ -19,7 +21,7 @@ export default function App() {
       <LittleLemonHeader />
       <NavigationContainer>
         <Drawer.Navigator
-          screenOptions={{ drawerPosition: "right" }}
+          screenOptions={{ drawerPosition: "left" }}
           initialRouteName="Login"
         >
           <Drawer.Screen
