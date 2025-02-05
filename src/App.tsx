@@ -21,23 +21,31 @@ export default function App() {
       <LittleLemonHeader />
       <NavigationContainer>
         <Drawer.Navigator
-          screenOptions={{ drawerPosition: "left" }}
+          screenOptions={{
+            drawerPosition: "left",
+            headerShown: true,
+            headerTitle: "",
+            headerTintColor: "white",
+            headerStyle: {
+              backgroundColor: "#495E57",
+            },
+          }}
           initialRouteName="Login"
         >
           <Drawer.Screen
             name="Login"
             component={LoginScreen}
-            options={{ headerShown: false }}
+            options={{ headerShown: true }}
           />
           <Drawer.Screen
             name="Menu"
             component={MenuItems}
-            options={{ headerShown: false }}
+            options={{ headerShown: true }}
           />
           <Drawer.Screen
             name="Home"
             component={HomeScreen}
-            options={{ headerShown: false }}
+            options={{ headerShown: true }}
           ></Drawer.Screen>
         </Drawer.Navigator>
       </NavigationContainer>
