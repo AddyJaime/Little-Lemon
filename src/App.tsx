@@ -1,7 +1,7 @@
 import React from "react";
 import { createDrawerNavigator } from "@react-navigation/drawer";
-import { View, StyleSheet } from "react-native";
-import { NavigationContainer } from "@react-navigation/native";
+import { View, StyleSheet, TouchableOpacity } from "react-native";
+import { NavigationContainer, useNavigation } from "@react-navigation/native";
 
 // components
 import LittleLemonHeader from "./components/LittleLemonHeader";
@@ -12,8 +12,10 @@ import HomeScreen from "./components/HomeScreen";
 
 // other comp
 import "react-native-gesture-handler";
+import { Ionicons } from "@expo/vector-icons";
 
 const Drawer = createDrawerNavigator();
+const navigation = useNavigation();
 
 export default function App() {
   return (
@@ -25,9 +27,19 @@ export default function App() {
             drawerPosition: "left",
             headerShown: true,
             headerTitle: "",
-            headerTintColor: "white",
+            // headerTintColor: "white",
             headerStyle: {
               backgroundColor: "#495E57",
+            },
+            headerLeftContainerStyle: {
+              paddingLeft: 20,
+            },
+            headerLeft: () => {
+              return (
+                <TouchableOpacity onPress={() => navigation.openDrawer()}>
+                  <Ionicons name="menu" size={40} color={"white"} />
+                </TouchableOpacity>
+              );
             },
           }}
           initialRouteName="Login"
