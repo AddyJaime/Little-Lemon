@@ -83,7 +83,8 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     fontSize: 25,
     textAlign: "center",
-    marginVertical: 20,
+    marginVertical: 10,
+    marginHorizontal: 10,
   },
   header: {
     color: "black",

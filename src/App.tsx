@@ -1,7 +1,7 @@
 import React from "react";
 import { createDrawerNavigator } from "@react-navigation/drawer";
 import { View, StyleSheet, TouchableOpacity } from "react-native";
-import { NavigationContainer, DrawerActions } from "@react-navigation/native";
+import { NavigationContainer } from "@react-navigation/native";
 
 // components
 import LittleLemonHeader from "./components/LittleLemonHeader";
@@ -33,9 +33,7 @@ export default function App() {
               paddingLeft: 20,
             },
             headerLeft: () => (
-              <TouchableOpacity
-                onPress={() => navigation.dispatch(DrawerActions.openDrawer())}
-              >
+              <TouchableOpacity onPress={() => navigation.openDrawer()}>
                 <Ionicons name="menu" size={40} color={"white"} />
               </TouchableOpacity>
             ),
