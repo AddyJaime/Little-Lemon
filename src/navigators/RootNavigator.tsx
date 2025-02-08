@@ -1,7 +1,6 @@
 import React from "react";
 import { createDrawerNavigator } from "@react-navigation/drawer";
 import { View, StyleSheet, TouchableOpacity } from "react-native";
-import { NavigationContainer } from "@react-navigation/native";
 
 // components
 import LittleLemonHeader from "../components/LittleLemonHeader";
