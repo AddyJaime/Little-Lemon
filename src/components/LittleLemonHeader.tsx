@@ -11,7 +11,7 @@ const LittleLemonHeader: React.FC = () => {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: "#EE9972",
+    backgroundColor: "white",
   },
   headerText: {
     fontWeight: "bold",

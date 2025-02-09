@@ -12,7 +12,7 @@ const LittleLemonFooter: React.FC = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 0,
-    backgroundColor: "#EE9972",
+    backgroundColor: "white",
     justifyContent: "center",
     padding: 20,
     // margin: 10,

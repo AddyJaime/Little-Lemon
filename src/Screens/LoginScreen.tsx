@@ -10,6 +10,7 @@ import {
   Pressable,
   Button,
   Alert,
+  Image,
 } from "react-native";
 
 import { useNavigation } from "@react-navigation/native";
@@ -31,7 +32,7 @@ const LoginScreen: React.FC = () => {
       onChangeFirstName("");
       onChangePassoword("");
     } else {
-      Alert.alert("");
+      Alert.alert("Incorrect credentials. Please try again.");
     }
   };
   return (
@@ -44,6 +45,10 @@ const LoginScreen: React.FC = () => {
           keyboardDismissMode="on-drag"
           keyboardShouldPersistTaps="handled"
         >
+          <Image
+            style={styles.image}
+            source={require("../../assets/little-lemon-logo.png")}
+          />
           <Text style={styles.welcomeText}>Welcome back</Text>
           <TextInput
             style={styles.nameInput}
@@ -82,8 +87,8 @@ const LoginScreen: React.FC = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#495E57",
-    paddingVertical: 100,
+    backgroundColor: "white",
+    paddingVertical: 50,
   },
   welcomeText: {
     color: "black",
@@ -101,7 +106,7 @@ const styles = StyleSheet.create({
   nameInput: {
     height: 40,
     width: 250,
-    marginHorizontal: 80,
+    marginHorizontal: 90,
     margin: 30,
     borderWidth: 1,
     padding: 10,
@@ -111,7 +116,7 @@ const styles = StyleSheet.create({
   },
   passwordInput: {
     height: 40,
-    marginHorizontal: 80,
+    marginHorizontal: 90,
     borderWidth: 1,
     padding: 10,
     borderColor: "black",
@@ -120,11 +125,10 @@ const styles = StyleSheet.create({
     borderRadius: 10,
   },
   button: {
-    backgroundColor: "#EE9972",
+    backgroundColor: "green",
     padding: 10,
     borderRadius: 8,
-
-    width: 100,
+    width: 130,
     marginHorizontal: 155,
     marginVertical: 10,
   },
@@ -133,7 +137,15 @@ const styles = StyleSheet.create({
     transform: [{ scale: 0.95 }],
   },
   textLogin: {
+    color: "white",
     textAlign: "center",
+    fontSize: 20,
+  },
+  image: {
+    width: 200,
+    height: 150,
+    resizeMode: "contain",
+    marginHorizontal: 120,
   },
 });
 
