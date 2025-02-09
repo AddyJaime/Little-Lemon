@@ -11,13 +11,13 @@ const LittleLemonHeader: React.FC = () => {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: "white",
+    backgroundColor: "#1C4532",
   },
   headerText: {
     fontWeight: "bold",
     textAlign: "center",
     fontSize: 25,
-    color: "black",
+    color: "white",
     padding: 70,
     paddingBottom: 10,
   },

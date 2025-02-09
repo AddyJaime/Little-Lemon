@@ -87,7 +87,7 @@ const LoginScreen: React.FC = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "white",
+    backgroundColor: "rgba(0, 4, 3, 0.03)",
     paddingVertical: 50,
   },
   welcomeText: {
@@ -125,7 +125,7 @@ const styles = StyleSheet.create({
     borderRadius: 10,
   },
   button: {
-    backgroundColor: "green",
+    backgroundColor: "#1E6F50",
     padding: 10,
     borderRadius: 8,
     width: 130,
