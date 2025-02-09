@@ -56,7 +56,7 @@ const RootNavigator: React.FC = () => {
         ></Drawer.Screen>
       </Drawer.Navigator>
 
-      <LittleLemonFooter />
+      {/* <LittleLemonFooter /> */}
     </View>
   );
 };

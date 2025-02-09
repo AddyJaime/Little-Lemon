@@ -4,7 +4,7 @@ import { View, Text, StyleSheet } from "react-native";
 const LittleLemonFooter: React.FC = () => {
   return (
     <View style={styles.container}>
-      <Text style={styles.p}>All rights reserved by Little Lemon, 2022</Text>
+      {<Text style={styles.p}>All rights reserved by Little Lemon, 2022</Text>}
     </View>
   );
 };

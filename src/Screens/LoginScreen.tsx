@@ -88,12 +88,12 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "rgba(0, 4, 3, 0.03)",
-    paddingVertical: 50,
+    paddingVertical: 110,
   },
   welcomeText: {
     color: "black",
     fontWeight: "bold",
-    fontSize: 25,
+    fontSize: 30,
     textAlign: "center",
     marginVertical: 10,
     paddingHorizontal: 100,
@@ -105,8 +105,8 @@ const styles = StyleSheet.create({
   },
   nameInput: {
     height: 40,
-    width: 250,
-    marginHorizontal: 90,
+    width: 300,
+    marginHorizontal: 70,
     margin: 30,
     borderWidth: 1,
     padding: 10,
@@ -116,12 +116,12 @@ const styles = StyleSheet.create({
   },
   passwordInput: {
     height: 40,
-    marginHorizontal: 90,
+    marginHorizontal: 70,
     borderWidth: 1,
     padding: 10,
     borderColor: "black",
     backgroundColor: "white",
-    width: 250,
+    width: 300,
     borderRadius: 10,
   },
   button: {
@@ -143,7 +143,7 @@ const styles = StyleSheet.create({
   },
   image: {
     width: 200,
-    height: 150,
+    height: 180,
     resizeMode: "contain",
     marginHorizontal: 120,
   },
