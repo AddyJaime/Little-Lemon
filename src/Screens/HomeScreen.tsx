@@ -26,7 +26,9 @@ const HomeScreen: React.FC = () => {
       >
         <Text style={styles.backToLogin}>← Back to Login</Text>
       </Pressable>
-      <Text style={styles.header}>Welcome to little lemon!</Text>
+      <Text style={styles.header}>
+        <Text style={styles.highlight}> Little Lemon </Text>Maryland
+      </Text>
       <Pressable
         style={({ pressed }) => [
           styles.button,
@@ -43,29 +45,35 @@ const HomeScreen: React.FC = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#495E57",
+    backgroundColor: "rgba(0, 4, 3, 0.03)",
+    marginVertical: 100,
   },
   header: {
     marginVertical: 30,
     textAlign: "center",
     fontSize: 30,
+    fontWeight: "bold",
   },
-  buttonText: { fontSize: 17, color: "black", textAlign: "center" },
+  buttonText: { fontSize: 17, color: "white", textAlign: "center" },
   button: {
     width: 120,
     height: 40,
-    backgroundColor: "#EE9972",
+    backgroundColor: "#1E6F50",
     padding: 10,
     borderRadius: 8,
     marginHorizontal: 150,
   },
   buttonNumberOne: {},
   backToLogin: {
-    color: "white",
+    color: "black",
     fontSize: 20,
     margin: 10,
   },
   buttonPressed: { opacity: 0.5, transform: [{ scale: 0.95 }] },
+  highlight: {
+    color: "#1E6F50",
+    fontWeight: "bold",
+  },
 });
 
 export default HomeScreen;
