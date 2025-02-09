@@ -9,6 +9,7 @@ import {
   Platform,
   Pressable,
   Button,
+  Alert,
 } from "react-native";
 
 import { useNavigation } from "@react-navigation/native";
@@ -25,7 +26,13 @@ const LoginScreen: React.FC = () => {
     useNavigation<NativeStackNavigationProp<RootStackParamList>>();
 
   const handleLogin = () => {
-    navigation.navigate("Home");
+    if (firstName.includes("addyjaime") && password === "123") {
+      navigation.navigate("Home");
+      onChangeFirstName("");
+      onChangePassoword("");
+    } else {
+      Alert.alert("");
+    }
   };
   return (
     <View style={styles.container}>

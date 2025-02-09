@@ -42,7 +42,7 @@ const RootNavigator: React.FC = () => {
         <Drawer.Screen
           name="Login"
           component={LoginScreen}
-          options={{ headerShown: true }}
+          options={{ headerShown: false }}
         />
         <Drawer.Screen
           name="Menu"
