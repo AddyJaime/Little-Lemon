@@ -9,9 +9,11 @@ import {
 } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 
+// Props and types
 import { RootStackParamList } from "../types";
+import { StackNavigationProp } from "@react-navigation/stack";
 
-type NavigationProp = StackNavigationProp<RootStackParamList, "Home">;
+type NavigationProp = StackNavigationProp<RootStackParamList>;
 
 const menuItemsToDisplay = [
   { title: "Appetizers", data: [{ name: "Hummus" }, { name: "Falafel" }] },
@@ -24,7 +26,7 @@ const menuItemsToDisplay = [
 
 const MenuItems: React.FC = () => {
   const [showMenu, setShowMenu] = useState(false);
-  const navigation = useNavigation();
+  const navigation = useNavigation<NavigationProp>();
 
   return (
     <View style={styles.container}>

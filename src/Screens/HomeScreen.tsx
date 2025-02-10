@@ -3,11 +3,7 @@ import { View, Text, StyleSheet, Pressable } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 
 import { NativeStackNavigationProp } from "@react-navigation/native-stack";
-
-type RootStackParamList = {
-  Menu: undefined;
-  Login: undefined;
-};
+import { RootStackParamList } from "../types";
 
 const HomeScreen: React.FC = () => {
   const navigation =
