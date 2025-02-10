@@ -27,7 +27,7 @@ const LoginScreen: React.FC = () => {
     useNavigation<NativeStackNavigationProp<RootStackParamList>>();
 
   const handleLogin = () => {
-    if (firstName.includes("addyjaime") && password === "123") {
+    if (firstName.includes("A") && password === "1") {
       navigation.navigate("Home");
       onChangeFirstName("");
       onChangePassoword("");

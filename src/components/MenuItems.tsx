@@ -9,6 +9,10 @@ import {
 } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 
+import { RootStackParamList } from "../types";
+
+type NavigationProp = StackNavigationProp<RootStackParamList, "Home">;
+
 const menuItemsToDisplay = [
   { title: "Appetizers", data: [{ name: "Hummus" }, { name: "Falafel" }] },
   {
@@ -29,7 +33,7 @@ const MenuItems: React.FC = () => {
           styles.goBackButton,
           pressed && styles.buttonPressed,
         ]}
-        onPress={() => navigation.goBack()}
+        onPress={() => navigation.navigate("Home")}
       >
         <Text style={styles.goBackText}>← Back to home</Text>
       </Pressable>
@@ -85,7 +89,7 @@ const MenuItems: React.FC = () => {
 const styles = StyleSheet.create({
   container: { flex: 1, padding: 20, backgroundColor: "rgba(0, 4, 3, 0.03)" },
   goBackButton: { marginBottom: 10, alignSelf: "flex-start" },
-  goBackText: { fontSize: 22, color: "white" },
+  goBackText: { fontSize: 22, color: "black" },
   headerContainer: {
     flexDirection: "row",
     alignItems: "center",
@@ -101,7 +105,7 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
   },
   button: {
-    backgroundColor: "#EE9972",
+    backgroundColor: "",
     padding: 15,
     borderRadius: 8,
     alignItems: "center",
@@ -115,10 +119,10 @@ const styles = StyleSheet.create({
   },
   itemContainer: {
     padding: 10,
-    backgroundColor: "rgba(0, 4, 3, 0.03)",
+    backgroundColor: "rgba(0, 4, 3, 0.24)",
     marginVertical: 5,
   },
-  itemText: { fontSize: 18, color: "#F4CE14" },
+  itemText: { fontSize: 18, color: "black" },
   buttonPressed: {
     opacity: 0.5,
     transform: [{ scale: 0.95 }],
