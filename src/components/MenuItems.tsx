@@ -83,7 +83,7 @@ const MenuItems: React.FC = () => {
 };
 
 const styles = StyleSheet.create({
-  container: { flex: 1, padding: 20, backgroundColor: "" },
+  container: { flex: 1, padding: 20, backgroundColor: "rgba(0, 4, 3, 0.03)" },
   goBackButton: { marginBottom: 10, alignSelf: "flex-start" },
   goBackText: { fontSize: 22, color: "white" },
   headerContainer: {
@@ -113,7 +113,11 @@ const styles = StyleSheet.create({
     padding: 5,
     textAlign: "center",
   },
-  itemContainer: { padding: 10, backgroundColor: "", marginVertical: 5 },
+  itemContainer: {
+    padding: 10,
+    backgroundColor: "rgba(0, 4, 3, 0.03)",
+    marginVertical: 5,
+  },
   itemText: { fontSize: 18, color: "#F4CE14" },
   buttonPressed: {
     opacity: 0.5,
