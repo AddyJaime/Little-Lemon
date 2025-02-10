@@ -5,9 +5,10 @@ import { useNavigation } from "@react-navigation/native";
 import { NativeStackNavigationProp } from "@react-navigation/native-stack";
 import { RootStackParamList } from "../types";
 
+type NavigationProp = NativeStackNavigationProp<RootStackParamList>;
+
 const HomeScreen: React.FC = () => {
-  const navigation =
-    useNavigation<NativeStackNavigationProp<RootStackParamList>>();
+  const navigation = useNavigation<NavigationProp>();
   return (
     <View style={styles.container}>
       <Pressable

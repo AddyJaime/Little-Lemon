@@ -16,15 +16,14 @@ import {
 import { useNavigation } from "@react-navigation/native";
 import { NativeStackNavigationProp } from "@react-navigation/native-stack";
 
-type RootStackParamList = {
-  Home: undefined;
-};
+import { RootStackParamList } from "../types";
+
+type NavigationProp = NativeStackNavigationProp<RootStackParamList>;
 
 const LoginScreen: React.FC = () => {
   const [firstName, onChangeFirstName] = useState("");
   const [password, onChangePassoword] = useState("");
-  const navigation =
-    useNavigation<NativeStackNavigationProp<RootStackParamList>>();
+  const navigation = useNavigation<NavigationProp>();
 
   const handleLogin = () => {
     if (firstName.includes("A") && password === "1") {

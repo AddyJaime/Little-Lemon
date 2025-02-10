@@ -5,9 +5,10 @@ import { View, StyleSheet, TouchableOpacity } from "react-native";
 // components
 import LittleLemonHeader from "../components/LittleLemonHeader";
 import LoginScreen from "../Screens/LoginScreen";
-import MenuItems from "../components/MenuItems";
+
 import LittleLemonFooter from "../components/LittleLemonFooter";
 import HomeScreen from "../Screens/HomeScreen";
+import MenuScreen from "../Screens/MenuScreen";
 
 // other comp
 import "react-native-gesture-handler";
@@ -46,14 +47,14 @@ const RootNavigator: React.FC = () => {
         />
         <Drawer.Screen
           name="Menu"
-          component={MenuItems}
+          component={MenuScreen}
           options={{ headerShown: true }}
         />
         <Drawer.Screen
           name="Home"
           component={HomeScreen}
           options={{ headerShown: false }}
-        ></Drawer.Screen>
+        />
       </Drawer.Navigator>
 
       {/* <LittleLemonFooter /> */}

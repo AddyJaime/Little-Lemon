@@ -1,30 +1,13 @@
 import React, { useState } from "react";
-import {
-  View,
-  Text,
-  StyleSheet,
-  SectionList,
-  Pressable,
-  Image,
-} from "react-native";
+import { View, Text, StyleSheet, Pressable, Image } from "react-native";
 import { useNavigation } from "@react-navigation/native";
-
-// Props and types
+import { NativeStackNavigationProp } from "@react-navigation/native-stack";
 import { RootStackParamList } from "../types";
-import { StackNavigationProp } from "@react-navigation/stack";
+import MenuItemList from "../components/MenuItemList";
 
-type NavigationProp = StackNavigationProp<RootStackParamList>;
+type NavigationProp = NativeStackNavigationProp<RootStackParamList>;
 
-const menuItemsToDisplay = [
-  { title: "Appetizers", data: [{ name: "Hummus" }, { name: "Falafel" }] },
-  {
-    title: "Main Dishes",
-    data: [{ name: "Lentil Burger" }, { name: "Kofta" }],
-  },
-  { title: "Desserts", data: [{ name: "Baklava" }, { name: "Tiramisu" }] },
-];
-
-const MenuItems: React.FC = () => {
+const MenuScreen: React.FC = () => {
   const [showMenu, setShowMenu] = useState(false);
   const navigation = useNavigation<NavigationProp>();
 
@@ -51,15 +34,9 @@ const MenuItems: React.FC = () => {
             <Text style={styles.title}>Little Lemon</Text>
           </View>
           <Text style={styles.description}>
-            Little Lemon Restaurant was founded in Chicago in 2020 by two
-            brothers, Mario and Adrian, who share a passion for Mediterranean
-            cuisine. Their dream was to create a cozy neighborhood bistro where
-            guests could enjoy authentic, simple dishes made with fresh,
-            high-quality ingredients. With a menu inspired by Greek, Turkish,
-            and Italian flavors, Little Lemon quickly became a local favorite
-            for its homemade hummus, lentil burgers, and refreshing
-            citrus-infused cocktails.
+            Little Lemon Restaurant fue fundado en Chicago en 2020...
           </Text>
+
           <Pressable
             style={({ pressed }) => [
               styles.button,
@@ -71,18 +48,7 @@ const MenuItems: React.FC = () => {
           </Pressable>
         </>
       ) : (
-        <SectionList
-          keyExtractor={(item, index) => item.name + index}
-          sections={menuItemsToDisplay}
-          renderItem={({ item }) => (
-            <View style={styles.itemContainer}>
-              <Text style={styles.itemText}>{item.name}</Text>
-            </View>
-          )}
-          renderSectionHeader={({ section }) => (
-            <Text style={styles.sectionHeader}>{section.title}</Text>
-          )}
-        />
+        <MenuItemList />
       )}
     </View>
   );
@@ -98,7 +64,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   image: { width: 50, height: 50, paddingRight: 30 },
-  title: { fontSize: 20, color: "white", marginRight: 20 },
+  title: { fontSize: 20, color: "black", marginRight: 20 },
   description: {
     fontSize: 20,
     textAlign: "center",
@@ -107,28 +73,16 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
   },
   button: {
-    backgroundColor: "",
+    backgroundColor: "#fbdabb",
     padding: 15,
     borderRadius: 8,
     alignItems: "center",
   },
   buttonText: { fontSize: 18, color: "black" },
-  sectionHeader: {
-    fontSize: 22,
-    backgroundColor: "#fbdabb",
-    padding: 5,
-    textAlign: "center",
-  },
-  itemContainer: {
-    padding: 10,
-    backgroundColor: "rgba(0, 4, 3, 0.24)",
-    marginVertical: 5,
-  },
-  itemText: { fontSize: 18, color: "black" },
   buttonPressed: {
     opacity: 0.5,
     transform: [{ scale: 0.95 }],
   },
 });
 
-export default MenuItems;
+export default MenuScreen;
