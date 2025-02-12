@@ -1,7 +1,6 @@
 import React from "react";
 import { View, Text, StyleSheet, SectionList } from "react-native";
 
-// Datos del menú
 const menuItemsToDisplay = [
   { title: "Appetizers", data: [{ name: "Hummus" }, { name: "Falafel" }] },
   {
@@ -11,7 +10,6 @@ const menuItemsToDisplay = [
   { title: "Desserts", data: [{ name: "Baklava" }, { name: "Tiramisu" }] },
 ];
 
-// Componente que muestra la lista de menú
 const MenuItemList: React.FC = () => {
   return (
     <SectionList

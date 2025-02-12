@@ -13,6 +13,7 @@ import MenuScreen from "../Screens/MenuScreen";
 // other comp
 import "react-native-gesture-handler";
 import { Ionicons } from "@expo/vector-icons";
+import WelcomeScreen from "../Screens/WelcomeScreen";
 
 const Drawer = createDrawerNavigator();
 
