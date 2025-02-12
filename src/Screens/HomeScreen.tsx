@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, StyleSheet, Pressable } from "react-native";
+import { View, Text, StyleSheet, Pressable, Image } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 
 import { NativeStackNavigationProp } from "@react-navigation/native-stack";
@@ -23,6 +23,9 @@ const HomeScreen: React.FC = () => {
       >
         <Text style={styles.backToLogin}>← Back to Login</Text>
       </Pressable>
+      <View>
+        <Image source={require("../../assets/little-lemon-restaurant.jpg")} />
+      </View>
       <Text style={styles.header}>
         <Text style={styles.highlight}> Little Lemon </Text>Maryland
       </Text>
