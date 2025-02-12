@@ -23,7 +23,7 @@ const HomeScreen: React.FC = () => {
       >
         <Text style={styles.backToLogin}>← Back to Login</Text>
       </Pressable>
-      <View>
+      <View style={styles.imageContainer}>
         <Image source={require("../../assets/little-lemon-restaurant.jpg")} />
       </View>
       <Text style={styles.header}>
@@ -73,6 +73,10 @@ const styles = StyleSheet.create({
   highlight: {
     color: "#1E6F50",
     fontWeight: "bold",
+  },
+  imageContainer: {
+    justifyContent: "center",
+    alignItems: "center",
   },
 });
 
