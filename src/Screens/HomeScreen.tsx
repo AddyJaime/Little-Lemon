@@ -28,12 +28,11 @@ const HomeScreen: React.FC = () => {
       </View>
       <Text style={styles.header}>
         <Text style={styles.highlight}> Little Lemon </Text>Maryland
-        <Text style={styles.text}>
-          The Little Lemon Leaf Diner is a welcoming eatery located at 21356
-          Rock Hall Avenue in Rock Hall, Maryland. Known for its homemade meals,
-          the diner offers signature breakfast items like their famous Flannel
-          Cakes.
-        </Text>
+      </Text>
+      <Text style={styles.text}>
+        The Little Lemon Leaf Diner is a welcoming eatery located at 21356 Rock
+        Hall Avenue in Rock Hall, Maryland. Known for its homemade meals, the
+        diner offers signature breakfast items like their famous Flannel Cakes.
       </Text>
       <Pressable
         style={({ pressed }) => [
@@ -86,8 +85,11 @@ const styles = StyleSheet.create({
   },
   text: {
     color: "black",
-    padding: 20,
-    backgroundColor: "red",
+    fontSize: 20,
+    width: 450,
+    padding: 25,
+    textAlign: "center",
+    marginTop: -40,
   },
 });
 
