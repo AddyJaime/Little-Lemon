@@ -80,6 +80,7 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
   },
   imageContainer: {
+    borderRadius: 20,
     justifyContent: "center",
     alignItems: "center",
   },
