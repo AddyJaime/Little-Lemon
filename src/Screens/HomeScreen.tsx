@@ -70,7 +70,8 @@ const styles = StyleSheet.create({
   },
   buttonNumberOne: {},
   backToLogin: {
-    color: "black",
+    color: "blue",
+    fontWeight: "bold",
     fontSize: 20,
     margin: 10,
   },
