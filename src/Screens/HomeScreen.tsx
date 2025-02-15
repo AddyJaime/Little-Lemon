@@ -80,6 +80,7 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
   },
   imageContainer: {
+    padding: 30,
     justifyContent: "center",
     alignItems: "center",
   },
